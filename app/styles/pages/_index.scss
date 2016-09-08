@@ -15,4 +15,29 @@ body {
   @media #{$small}{
     width: 100%;
   }
+  h2 {
+    font-family: 'Baloo Tamma', cursive;
+    text-shadow: 1px 1px 10px rgba(0,0,0,.9);
+    font-size: 45px;
+    &.smaller {
+      font-size: 40px;
+    }
+  }
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
 }
