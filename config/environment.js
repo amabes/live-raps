@@ -1,11 +1,13 @@
 /* jshint node: true */
-
-module.exports = function(environment) {
-  var ENV = {
+/* eslint-disable no-undef */
+module.exports = function (environment) {
+/* eslint-enable */
+  const ENV = {
     modulePrefix: 'liveraps',
-    environment: environment,
-    baseURL: '/',
+    environment:  environment,
+    baseURL:      '/',
     locationType: 'auto',
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
