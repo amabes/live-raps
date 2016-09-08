@@ -6,6 +6,9 @@ module.exports = function (environment) {
     modulePrefix: 'liveraps',
     environment:  environment,
     baseURL:      '/',
+    googleFonts:  [
+      'Baloo+Tamma'
+    ],
     locationType: 'auto',
 
     EmberENV: {
