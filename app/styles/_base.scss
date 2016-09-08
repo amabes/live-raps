@@ -1,3 +1,5 @@
+$small: "(max-width: 767px)";
+
 html, body {
   height: 100%;
 }
@@ -156,9 +158,5 @@ a, a:focus, a:hover {
   .mastfoot,
   .cover-container {
     width: 700px;
-  }
-  .carousel {
-    width: 70%;
-    margin: 0 auto;
   }
 }

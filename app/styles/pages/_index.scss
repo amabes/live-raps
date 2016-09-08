@@ -8,3 +8,11 @@ body {
     }
   }
 }
+
+.carousel {
+  width: 70%;
+  margin: 0 auto;
+  @media #{$small}{
+    width: 100%;
+  }
+}
