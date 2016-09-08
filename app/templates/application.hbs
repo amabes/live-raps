@@ -1,0 +1,36 @@
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">
+            <img src="images/LOGO-BW-white.png" />
+          </h3>
+          <nav>
+            <ul class="nav masthead-nav">
+              <li>
+                {{#link-to 'index'}}Artists{{/link-to}}
+              </li>
+              <li>
+                {{#link-to 'about'}}About{{/link-to}}
+              </li>
+              <li>
+                <a href="mailto:gatsby@liveraps.com">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      {{outlet}}
+
+      <div class="mastfoot">
+        <div class="inner">
+          <p>&copy; 2016 <a href="https://www.instagram.com/LiveRaps">@LiveRaps</a>.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

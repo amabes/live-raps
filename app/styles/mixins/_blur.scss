@@ -1,0 +1,8 @@
+@mixin blur($px: 0) {
+  filter: blur($px+px);
+  -webkit-filter: blur($px+px);
+  -moz-filter: blur($px+px);
+  -o-filter: blur($px+px);
+  -ms-filter: blur($px+px);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='#{$px}');
+}

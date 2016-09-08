@@ -1,0 +1,10 @@
+// MIXINS
+@import 'mixins/blur';
+
+// GENERAL
+@import 'base';
+@import 'nav';
+
+// PAGES
+@import 'pages/index';
+@import 'pages/about';

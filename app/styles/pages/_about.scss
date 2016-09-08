@@ -1,0 +1,5 @@
+body {
+  &[route=about] {
+    background-image: url("../images/backgrounds/about.jpg");
+  }
+}
