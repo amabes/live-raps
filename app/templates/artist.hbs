@@ -1,1 +1,118 @@
-{{outlet}}
+<div id="top" class="holder">
+    <div class="sector clearfix">
+        {{#if artist.bannerImg}}
+          <img id="banner-img" src="{{artist.bannerImg}}" />
+        {{/if}}
+        <div id="downloadApps" class="applinks">
+            <!--<a class="icon-spotify social-link" href="https://open.spotify.com/artist/6N1xia8s2Npb5BMk4GOzqa" title="Spotify" target="_blank"></a>-->
+            <!-- <a class="icon-itunes social-link" href="" title="iTunes" target="_blank"></a> -->
+            {{#if artist.spotifyUrl}}
+              <a class="icon-spotify social-link" title="Spotify" href="{{artist.spotifyUrl}}">
+                <img src="imgs/App-Store-Badge21.png" height="50" width="150">
+              </a>
+            {{/if}}
+            {{#if artist.itunesStoreUrl}}
+              <a id="itunes" href="{{artist.itunesUrl}}" title="iTunes">
+                <img src="imgs/App-Store-Badge21.png" height="50" width="150">
+              </a>
+            {{/if}}
+            {{#if artist.googlePlayUrl}}
+              <a href="{{artist.googlePlayUrl}}" title="Google Play">
+                <img src="imgs/Play-Store-Badge2.png" height="50" width="150">
+              </a>
+            {{/if}}
+        </div>
+    </div>
+</div>
+<div id="row-1" class="holder">
+    <div class="sector clearfix">
+        <div id="leftColumn" class="box multiBox fl">
+            <div id="widget_soundcloud" class="box">
+                <div class="box-title">MUSIC</div>
+                <div class="box-content">
+                  {{#if artist.soundCloudPlaylistSrc}}
+                    <iframe width="100%" height="315px" scrolling="no" frameborder="no" src="{{artist.soundCloudPlaylistSrc}}"></iframe>
+                  {{/if}}
+                </div>
+            </div>
+
+            <div id="widget_photos" class="box">
+                <div class="box-title">PHOTOS</div>
+                <div class="box-content">
+                    <div id="photos" class="clearfix"></div>
+                </div>
+            </div>
+
+            <div id="widget_social" class="box">
+                <div class="box-title">TWEETS</div>
+                <div id="twitter" class="box-content">
+                    <a class="twitter-timeline" href="https://twitter.com/28North" data-widget-id="384825769043578880" data-chrome="nofooter noheader transparent" data-tweet-limit="3">Tweets by @28North</a>
+                    <!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
+                </div>
+            </div>
+
+            <div id="widget_video" class="box">
+                <div class="box-title">VIDEO</div>
+                <iframe width="100%" height="315" src="//www.youtube.com/embed/videoseries?list=PLyJgymmUVeLkBteF165KUQVXzGxRytXnu" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div id="rightColumn" class="box multiBox fr">
+            <div id="widget_news" class="box">
+                <div class="box-title">NEWS</div>
+                <div id="tumblr" class="box-content clearfix">
+                    <div id="t-content"></div>
+                    <a id="t-link" class="fr" href="#" target="_blank">READ MORE</a>
+                </div>
+            </div>
+
+            <div id="widget_social" class="box fr">
+                <div class="box-title">LINKS:</div>
+                <div id="links" class="clearfix">
+                    <div class="fl">
+                        <a class="icon-facebook social-link" href="http://www.facebook.com/28north" title="Facebook" target="_blank">Facebook</a>
+                        <a class="icon-twitter social-link" href="http://www.twitter.com/28north" title="Twitter" target="_blank">Twitter</a>
+                        <a class="icon-youtube social-link" href="http://www.youtube.com/28norththeband" title="YouTube" target="_blank">YouTube</a>
+                        <a class="icon-soundcloud social-link" href="http://www.soundcloud.com/28-north" title="SoundCloud" target="_blank">SoundCloud</a>
+                        <a class="icon-instagramm social-link" href="https://instagram.com/28north" title="Instagram" target="_blank">Instagram</a>
+                    </div>
+                    <div class="fl">
+                        <a class="icon-spotify social-link" href="https://open.spotify.com/artist/6N1xia8s2Npb5BMk4GOzqa" title="Spotify" target="_blank">Spotify</a>
+                        <a class="icon-itunes social-link" href="https://itunes.apple.com/us/album/world-on-fire/id871185131" title="iTunes" target="_blank">iTunes</a>
+                        <a class="icon-tumbler social-link" href="http://28north.tumblr.com/" title="Tumblr" target="_blank">Tumblr</a>
+                        <a class="icon-pandora social-link" href="http://www.pandora.com/28-north/28-north" title="Pandora" target="_blank">Pandora</a>
+                        <a class="icon-star social-link" href="http://www.reverbnation.com/28north" title="ReverbNation" target="_blank">ReverbNation</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="widget_reverbnation" class="box">
+                <div class="box-title">TOUR</div>
+                <iframe width="100%" height="578" class="widget_iframe" src="http://www.reverbnation.com/widget_code/html_widget/artist_54335?widget_id=52&posted_by=artist_54335&pwc[design]=default&pwc[background_color]=%23333333&pwc[layout]=detailed&pwc[show_map]=0&pwc[size]=fit" frameborder="0" scrolling="no"></iframe>
+            </div>
+
+            <!-- <div id="widget_merch" class="box">
+              <div class="box-title">MERCH</div>
+              <a class="wepay-widget" href="https://www.wepay.com/stores/1426458?widget_type=shop&amp;widget_shop_id=1426458&amp;widget_size=medium&amp;widget_row=3&amp;widget_column=2&amp;widget_auth_token=0eab82b783336b532cdf9641cefb7bb7a26cd292">Shopping at 28 North Merch Shop</a>
+              <script id="wepay-widget_script" type="text/javascript" src="https://static.wepay.com/min/js/widget.wepay.js"></script>
+            </div> -->
+
+            <div id="widget_contact_handles" class="box">
+                <div class="box-title">CONTACT</div>
+                <div class="box-content clearfix">
+                  <br>
+
+                  <strong>Band</strong>
+                  <p>
+                    <a href="mailto:28northband@gmail.com" title="Email 28North">28northband@gmail.com</a>
+                  </p>
+
+                  <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
