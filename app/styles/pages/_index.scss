@@ -1,6 +1,6 @@
 body {
   &[route=index] {
-    background: url("../images/backgrounds/index.jpg") no-repeat 0 0 transparent;
+    background-image: url("../images/backgrounds/index.jpg");
     .lead {
       img {
         width: 100%;
