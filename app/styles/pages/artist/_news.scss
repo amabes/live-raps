@@ -1,0 +1,36 @@
+#widget_news {
+  overflow: hidden;
+  font-size: 20px;
+  img {
+    width:100%;
+  }
+  p:first-child {
+    margin-top:0;
+  }
+  a {
+    color: white;
+  }
+}
+
+#t-link {
+  display: block;
+  margin:8px 0 0;
+  text-decoration: none;
+  &:after {
+    content:' »';
+    font-size: 20px;
+  }
+}
+
+#t-content {
+  max-height: 648px;
+  overflow: hidden;
+  &.t-photo img {
+    width: 100%;
+  }
+}
+
+/* TWITTER */
+#twitter .timeline-header {
+  display: none !important;
+}

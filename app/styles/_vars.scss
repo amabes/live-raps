@@ -1,0 +1,6 @@
+// MEDIA QUERIES
+$small: "(max-width: 767px)";
+$small-range: (640px);
+$screen: "screen" !default;
+$small-up: "#{$screen} and (min-width:641px)" !default;
+$small-only: "#{$screen} and (max-width: #{$small-range})" !default;

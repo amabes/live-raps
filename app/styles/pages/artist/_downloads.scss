@@ -1,0 +1,47 @@
+/*********************************
+            DOWNLOADS
+**********************************/
+#widget_downloads {
+  .box-content {
+    background: url('../../imgs/carbon_fibre_transparent.png') repeat 0 0 #000;
+    padding: 10px;
+  }
+  .download {
+    padding: 11.5px;
+    background: url('../../imgs/carbon_fibre_transparent.png') repeat 0 0 #000;
+    &:nth-child(2n+2) {
+      background-color: rgba(255, 255, 255, .3)
+    }
+    .download-links {
+      width: 282px;
+      margin: 7px 0 0 10px;
+      .d-title {
+        font-size: 30px;
+      }
+      a {
+        color: white;
+        margin: 8px 0 0 15px;
+        font-size: 20px
+      }
+    }
+    .ico {
+      background: url('/epk/imgs/downloads/monster.jpg') no-repeat 0 0 transparent;
+      height: 50px;
+      width: 50px;
+      display: block;
+      background-size: 100% !important;
+      /*&#d1 {
+        background: url('/imgs/downloads/monster.jpg') no-repeat 0 0 transparent;
+      }
+      &#d2 {
+        background: url('/imgs/downloads/call-me-up.jpg') no-repeat 0 0 transparent;
+      }
+      &#d3 {
+        background: url('/imgs/downloads/los-angeles.jpg') no-repeat 0 0 transparent;
+      }
+      &#d4 {
+        background: url('/imgs/downloads/surrender.jpg') no-repeat 0 0 transparent;
+      }*/
+    }
+  }
+}

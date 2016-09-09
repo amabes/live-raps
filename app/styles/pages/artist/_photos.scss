@@ -1,0 +1,38 @@
+#widget_photos {
+  #epk-photos {
+    a {
+      &:last-child {
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+  #photos {
+    background: url('../../imgs/carbon_fibre_transparent.png') repeat 0 0 #000;
+    padding: 10px 10px 0;
+    .instagram-placeholder {
+      margin: 0 15px 15px 0;
+      float: left;
+      @media #{$small-only}{
+        margin: 0 2% 2% 0;
+        width: 32%;
+        &:nth-child(3n+3) {
+          margin-right: 0;
+        }
+        &:nth-child(19), &:last-child {
+          display: none;
+        }
+      }
+      @media #{$small-up}{
+        &:nth-child(4n+4) {
+          margin-right: 0;
+        }
+      }
+      img {
+        width: 75px;
+        @media #{$small-only}{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

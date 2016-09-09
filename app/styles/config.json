@@ -1,0 +1,84 @@
+{
+  "name": "liveraps",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "13fc001ad92180e21b33a6afbd1832c6",
+      "css": "pandora",
+      "code": 38,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M766.7 125.1C711.1 77.1 633.7 53.1 535.8 53.1H150V84.6C272.7 84.6 288.8 105.6 288.8 258.6V746.1C288.8 899.1 272.8 921.6 150 921.6V953.1H544.6V921.6C421.8 921.6 405.7 899.1 405.7 746.1V558.6H535.8C633.7 558.6 711.1 534.6 766.7 488.1 822.2 440.1 850 380.1 850 306.6 850 233.1 822.2 173.1 766.7 125.1ZM534.4 504.6H405.7V108.6H534.3C655.6 108.6 719.9 191.1 719.9 306.6 719.9 422.1 655.6 504.6 534.4 504.6Z",
+        "width": 1000
+      },
+      "search": [
+        "pandora"
+      ]
+    },
+    {
+      "uid": "f5999a012fc3752386635ec02a858447",
+      "css": "download-cloud",
+      "code": 39,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "8e04c98c8f5ca0a035776e3001ad2638",
+      "css": "facebook",
+      "code": 33,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "4c1ef492f1d2c39a2250ae457cee2a6e",
+      "css": "instagram",
+      "code": 41,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "fb4794d89b77ab712ad56c0dc4c76c6b",
+      "css": "spotify",
+      "code": 37,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "627abcdb627cb1789e009c08e2678ef9",
+      "css": "twitter",
+      "code": 34,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "a9862b9d5197886c1ad693ecd7120b31",
+      "css": "youtube",
+      "code": 35,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "4a0984f0fb3fd89dd5bdd923f2ff8e45",
+      "css": "tumbler",
+      "code": 40,
+      "src": "typicons"
+    },
+    {
+      "uid": "kfzodo12ciruwganzy6h1bee2bpyz24d",
+      "css": "star",
+      "code": 42,
+      "src": "modernpics"
+    },
+    {
+      "uid": "c7715df42d0413b3cae83d4bc3943a3e",
+      "css": "soundcloud",
+      "code": 36,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "d6096cb47cc4448ac68b6a2e2c52a81d",
+      "css": "itunes",
+      "code": 105,
+      "src": "zocial"
+    }
+  ]
+}

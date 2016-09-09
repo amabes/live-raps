@@ -8,7 +8,7 @@ const Router = Ember.Router.extend(googlePageview, {
 
 Router.map(function () {
   this.route('about');
-  this.route('artist', {path: '/artist/:artist_name'});
+  this.route('artist', {path: '/:slug'});
   this.route('404', {
     path: '/*path'
   });

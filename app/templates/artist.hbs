@@ -1,23 +1,23 @@
 <div id="top" class="holder">
     <div class="sector clearfix">
-        {{#if artist.bannerImg}}
-          <img id="banner-img" src="{{artist.bannerImg}}" />
+        {{#if model.artist.banner}}
+          <img id="banner-img" src="{{model.artist.banner}}" />
         {{/if}}
         <div id="downloadApps" class="applinks">
             <!--<a class="icon-spotify social-link" href="https://open.spotify.com/artist/6N1xia8s2Npb5BMk4GOzqa" title="Spotify" target="_blank"></a>-->
             <!-- <a class="icon-itunes social-link" href="" title="iTunes" target="_blank"></a> -->
-            {{#if artist.spotifyUrl}}
-              <a class="icon-spotify social-link" title="Spotify" href="{{artist.spotifyUrl}}">
+            {{#if model.artist.spotifyUrl}}
+              <a class="icon-spotify social-link" title="Spotify" href="{{model.artist.spotifyUrl}}">
                 <img src="imgs/App-Store-Badge21.png" height="50" width="150">
               </a>
             {{/if}}
-            {{#if artist.itunesStoreUrl}}
-              <a id="itunes" href="{{artist.itunesUrl}}" title="iTunes">
+            {{#if model.artist.itunesApp}}
+              <a id="itunes" href="{{model.artist.itunesUrl}}" title="iTunes">
                 <img src="imgs/App-Store-Badge21.png" height="50" width="150">
               </a>
             {{/if}}
-            {{#if artist.googlePlayUrl}}
-              <a href="{{artist.googlePlayUrl}}" title="Google Play">
+            {{#if model.artist.googleApp}}
+              <a href="{{model.artist.googlePlayUrl}}" title="Google Play">
                 <img src="imgs/Play-Store-Badge2.png" height="50" width="150">
               </a>
             {{/if}}
@@ -30,8 +30,9 @@
             <div id="widget_soundcloud" class="box">
                 <div class="box-title">MUSIC</div>
                 <div class="box-content">
-                  {{#if artist.soundCloudPlaylistSrc}}
-                    <iframe width="100%" height="315px" scrolling="no" frameborder="no" src="{{artist.soundCloudPlaylistSrc}}"></iframe>
+                  {{#if model.artist.scPlaylist}}
+                    <!-- <iframe width="100%" height="315px" scrolling="no" frameborder="no" src="{{model.artist.soundCloudPlaylistSrc}}"></iframe> -->
+                    {{{model.artist.scPlaylist}}}
                   {{/if}}
                 </div>
             </div>
@@ -60,30 +61,50 @@
 
         <!-- RIGHT COLUMN -->
         <div id="rightColumn" class="box multiBox fr">
-            <div id="widget_news" class="box">
+            <!-- <div id="widget_news" class="box">
                 <div class="box-title">NEWS</div>
                 <div id="tumblr" class="box-content clearfix">
                     <div id="t-content"></div>
                     <a id="t-link" class="fr" href="#" target="_blank">READ MORE</a>
                 </div>
-            </div>
+            </div> -->
 
             <div id="widget_social" class="box fr">
                 <div class="box-title">LINKS:</div>
                 <div id="links" class="clearfix">
                     <div class="fl">
-                        <a class="icon-facebook social-link" href="http://www.facebook.com/28north" title="Facebook" target="_blank">Facebook</a>
-                        <a class="icon-twitter social-link" href="http://www.twitter.com/28north" title="Twitter" target="_blank">Twitter</a>
-                        <a class="icon-youtube social-link" href="http://www.youtube.com/28norththeband" title="YouTube" target="_blank">YouTube</a>
-                        <a class="icon-soundcloud social-link" href="http://www.soundcloud.com/28-north" title="SoundCloud" target="_blank">SoundCloud</a>
-                        <a class="icon-instagramm social-link" href="https://instagram.com/28north" title="Instagram" target="_blank">Instagram</a>
+                      {{#if model.artist.facebook}}
+                        <a class="icon-facebook social-link" href="{{model.artist.facebook}}" title="Facebook" target="_blank">Facebook</a>
+                      {{/if}}
+                      {{#if model.artist.twitter}}
+                        <a class="icon-twitter social-link" href="{{model.artist.twitter}}" title="Twitter" target="_blank">Twitter</a>
+                      {{/if}}
+                      {{#if model.artist.youtube}}
+                        <a class="icon-youtube social-link" href="{{model.artist.youtube}}" title="YouTube" target="_blank">YouTube</a>
+                      {{/if}}
+                      {{#if model.artist.soundcloud}}
+                        <a class="icon-soundcloud social-link" href="{{model.artist.soundcloud}}" title="SoundCloud" target="_blank">SoundCloud</a>
+                      {{/if}}
+                      {{#if model.artist.instagram}}
+                      <a class="icon-instagram social-link" href="{{model.artist.instagram}}" title="Instagram" target="_blank">Instagram</a>
+                      {{/if}}
                     </div>
                     <div class="fl">
-                        <a class="icon-spotify social-link" href="https://open.spotify.com/artist/6N1xia8s2Npb5BMk4GOzqa" title="Spotify" target="_blank">Spotify</a>
-                        <a class="icon-itunes social-link" href="https://itunes.apple.com/us/album/world-on-fire/id871185131" title="iTunes" target="_blank">iTunes</a>
-                        <a class="icon-tumbler social-link" href="http://28north.tumblr.com/" title="Tumblr" target="_blank">Tumblr</a>
-                        <a class="icon-pandora social-link" href="http://www.pandora.com/28-north/28-north" title="Pandora" target="_blank">Pandora</a>
-                        <a class="icon-star social-link" href="http://www.reverbnation.com/28north" title="ReverbNation" target="_blank">ReverbNation</a>
+                        {{#if model.artist.spotify}}
+                          <a class="icon-spotify social-link" href="{{model.artist.spotify}}" title="Spotify" target="_blank">Spotify</a>
+                        {{/if}}
+                        {{#if model.artist.itunes}}
+                          <a class="icon-itunes social-link" href="{{model.artist.itunes}}" title="iTunes" target="_blank">iTunes</a>
+                        {{/if}}
+                        {{#if model.artist.tumbler}}
+                          <a class="icon-tumbler social-link" href="{{model.artist.tumbler}}" title="Tumblr" target="_blank">Tumblr</a>
+                        {{/if}}
+                        {{#if model.artist.pandora}}
+                          <a class="icon-pandora social-link" href="{{model.artist.pandora}}" title="Pandora" target="_blank">Pandora</a>
+                        {{/if}}
+                        {{#if model.artist.reverbnation}}
+                          <a class="icon-star social-link" href="{{model.artist.reverbnation}}" title="ReverbNation" target="_blank">ReverbNation</a>
+                        {{/if}}
                     </div>
                 </div>
             </div>

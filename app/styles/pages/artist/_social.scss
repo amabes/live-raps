@@ -1,0 +1,61 @@
+#widget_social {
+  #links {
+    @media #{$small-only}{
+      width: 345px;
+      margin: auto;
+    }
+    .fl {
+      &:last-child {
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+}
+
+.social-link {
+  font-size: 20px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0 20px 0;
+  &:before {
+    display: inline-block;
+    padding: 8px;
+    margin: 0 10px 0 0;
+    width: auto;
+    min-width: 37px;
+  }
+  &.icon-facebook:before {
+    background: #3b589c;
+  }
+  &.icon-twitter:before {
+    background: #00abed;
+  }
+  &.icon-youtube:before {
+    background: #c9312c;
+  }
+  &.icon-soundcloud:before {
+    background: #fe5319;
+  }
+  &.icon-instagram:before {
+    background: #3b719a;
+  }
+  &.icon-spotify:before {
+    background: #69c106;
+  }
+  &.icon-soundcloud:before {
+    background: #fe5319;
+  }
+  &.icon-itunes:before {
+    background: #e9173e;
+  }
+  &.icon-tumbler:before {
+    background: #34465d;
+  }
+  &.icon-pandora:before {
+    background: #336699;
+  }
+  &.icon-star:before {
+    background: #f60000;
+  }
+}

@@ -1,0 +1,40 @@
+#widget_contact_handles {
+  .box-content {
+    padding: 0 10px;
+    .handle {
+      padding: 12px 0;
+      .handle-links {
+        margin: 7px 0 0 7px;
+        .d-title {
+          font-size: 30px;
+          color: #fff;
+          text-decoration: none;
+          @media #{$small-only}{
+            font-size: 27px;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .ico {
+        height: 50px;
+        width: 50px;
+        display: block;
+        background-size: 100% !important;
+        &#c1 {
+          background: url('../../imgs/twitter/mike0.jpg') no-repeat 0 0 transparent;
+        }
+        &#c2 {
+          background: url('../../imgs/twitter/ty0.jpg') no-repeat 0 0 transparent;
+        }
+        &#c3 {
+          background: url('../../imgs/twitter/mark0.jpg') no-repeat 0 0 transparent;
+        }
+        &#c4 {
+          background: url('../../imgs/twitter/jonathan0.jpg') no-repeat 0 0 transparent;
+        }
+      }
+    }
+  }
+}

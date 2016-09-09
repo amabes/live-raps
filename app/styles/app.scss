@@ -1,10 +1,11 @@
 // MIXINS
-@import 'mixins/blur';
+@import 'mixins/manifest';
 
 // GENERAL
+@import 'vars';
+@import 'fontello';
 @import 'base';
 @import 'nav';
 
 // PAGES
-@import 'pages/index';
-@import 'pages/about';
+@import 'pages/manifest';

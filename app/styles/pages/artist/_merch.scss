@@ -1,0 +1,32 @@
+#wepay-shop-wrapper {
+  margin: 20px 0 0;
+  font-weight: bold !important;
+  .wepay-shop {
+    width: 100% !important;
+    padding: 0 !important;
+    a {
+      font-weight: bold !important;
+    }
+    .wepay-shop-header {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .wepay-shop-items {
+      height: auto !important;
+      min-height: inherit !important;
+      .wepay-shop-item {
+        width: auto !important;
+        padding: 0 !important;
+        margin: 0 15px 20px 0 !important;
+        &:nth-child(2n+2) {
+          margin: 0 0 20px 0 !important;
+        }
+        .wepay-shop-item-thumbnail img {
+          height: 218px;
+          width: 218px;
+        }
+      }
+    }
+  }
+}
