@@ -1,61 +1,78 @@
 <div id="top" class="holder">
     <div class="sector clearfix">
-        {{#if model.artist.banner}}
+      {{#link-to 'index' id="name" }}
+        {{model.artist.name}}
+      {{/link-to}}
+      {{#if model.artist.banner}}
+        <div id="banner-img">
           <img id="banner-img" src="{{model.artist.banner}}" />
-        {{/if}}
-        <div id="downloadApps" class="applinks">
-            <!--<a class="icon-spotify social-link" href="https://open.spotify.com/artist/6N1xia8s2Npb5BMk4GOzqa" title="Spotify" target="_blank"></a>-->
-            <!-- <a class="icon-itunes social-link" href="" title="iTunes" target="_blank"></a> -->
-            {{#if model.artist.spotifyUrl}}
-              <a class="icon-spotify social-link" title="Spotify" href="{{model.artist.spotifyUrl}}">
-                <img src="imgs/App-Store-Badge21.png" height="50" width="150">
-              </a>
-            {{/if}}
-            {{#if model.artist.itunesApp}}
-              <a id="itunes" href="{{model.artist.itunesUrl}}" title="iTunes">
-                <img src="imgs/App-Store-Badge21.png" height="50" width="150">
-              </a>
-            {{/if}}
-            {{#if model.artist.googleApp}}
-              <a href="{{model.artist.googlePlayUrl}}" title="Google Play">
-                <img src="imgs/Play-Store-Badge2.png" height="50" width="150">
-              </a>
-            {{/if}}
         </div>
+      {{/if}}
+      <div id="downloadApps" class="applinks">
+        <!--<a class="icon-spotify social-link" href="https://open.spotify.com/artist/6N1xia8s2Npb5BMk4GOzqa" title="Spotify" target="_blank"></a>-->
+        <!-- <a class="icon-itunes social-link" href="" title="iTunes" target="_blank"></a> -->
+        {{#if model.artist.spotifyUrl}}
+          <a class="icon-spotify social-link" title="Spotify" href="{{model.artist.spotifyUrl}}">
+            <img src="imgs/App-Store-Badge21.png" height="50" width="150">
+          </a>
+        {{/if}}
+        {{#if model.artist.itunesApp}}
+          <a id="itunes" href="{{model.artist.itunesUrl}}" title="iTunes">
+            <img src="imgs/App-Store-Badge21.png" height="50" width="150">
+          </a>
+        {{/if}}
+        {{#if model.artist.googleApp}}
+          <a href="{{model.artist.googlePlayUrl}}" title="Google Play">
+            <img src="imgs/Play-Store-Badge2.png" height="50" width="150">
+          </a>
+        {{/if}}
+      </div>
     </div>
 </div>
 <div id="row-1" class="holder">
     <div class="sector clearfix">
         <div id="leftColumn" class="box multiBox fl">
+
+          {{#if model.artist.soundcloudPlaylist}}
             <div id="widget_soundcloud" class="box">
-                <div class="box-title">MUSIC</div>
-                <div class="box-content">
-                  {{#if model.artist.scPlaylist}}
-                    <!-- <iframe width="100%" height="315px" scrolling="no" frameborder="no" src="{{model.artist.soundCloudPlaylistSrc}}"></iframe> -->
-                    {{{model.artist.scPlaylist}}}
-                  {{/if}}
-                </div>
+              <div class="box-title">MUSIC</div>
+              <div class="box-content">
+                  {{{model.artist.soundcloudPlaylist}}}
+              </div>
             </div>
+            {{/if}}
 
-            <div id="widget_photos" class="box">
-                <div class="box-title">PHOTOS</div>
-                <div class="box-content">
-                    <div id="photos" class="clearfix"></div>
-                </div>
-            </div>
+            {{#if model.artist.photos}}
+              <div id="widget_photos" class="box">
+                  <div class="box-title">PHOTOS</div>
+                  <div class="box-content">
+                      <div id="photos" class="clearfix">
+                        <div class="photos-wrap">
+                          {{#each model.artist.photos as |photo|}}
+                            <a href="{{photo.href}}" target="_blank">
+                              <img src="{{photo.src}}" />
+                            </a>
+                          {{/each}}
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            {{/if}}
 
-            <div id="widget_social" class="box">
+            <!-- <div id="widget_social" class="box">
                 <div class="box-title">TWEETS</div>
                 <div id="twitter" class="box-content">
                     <a class="twitter-timeline" href="https://twitter.com/28North" data-widget-id="384825769043578880" data-chrome="nofooter noheader transparent" data-tweet-limit="3">Tweets by @28North</a>
-                    <!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </div>
-            </div>
+            </div> -->
 
-            <div id="widget_video" class="box">
+            {{#if model.artist.youtubePlaylist}}
+              <div id="widget_video" class="box">
                 <div class="box-title">VIDEO</div>
-                <iframe width="100%" height="315" src="//www.youtube.com/embed/videoseries?list=PLyJgymmUVeLkBteF165KUQVXzGxRytXnu" frameborder="0" allowfullscreen></iframe>
-            </div>
+                {{{model.artist.youtubePlaylist}}}
+              </div>
+            {{/if}}
 
         </div>
 
@@ -69,50 +86,55 @@
                 </div>
             </div> -->
 
-            <div id="widget_social" class="box fr">
+            {{#if model.artist.facebook}}
+              <div id="widget_social" class="box">
                 <div class="box-title">LINKS:</div>
                 <div id="links" class="clearfix">
-                    <div class="fl">
-                      {{#if model.artist.facebook}}
-                        <a class="icon-facebook social-link" href="{{model.artist.facebook}}" title="Facebook" target="_blank">Facebook</a>
-                      {{/if}}
-                      {{#if model.artist.twitter}}
-                        <a class="icon-twitter social-link" href="{{model.artist.twitter}}" title="Twitter" target="_blank">Twitter</a>
-                      {{/if}}
-                      {{#if model.artist.youtube}}
-                        <a class="icon-youtube social-link" href="{{model.artist.youtube}}" title="YouTube" target="_blank">YouTube</a>
-                      {{/if}}
-                      {{#if model.artist.soundcloud}}
-                        <a class="icon-soundcloud social-link" href="{{model.artist.soundcloud}}" title="SoundCloud" target="_blank">SoundCloud</a>
-                      {{/if}}
-                      {{#if model.artist.instagram}}
+                  <div class="">
+                    {{#if model.artist.facebook}}
+                      <a class="icon-facebook social-link" href="{{model.artist.facebook}}" title="Facebook" target="_blank">Facebook</a>
+                    {{/if}}
+                    {{#if model.artist.twitter}}
+                      <a class="icon-twitter social-link" href="{{model.artist.twitter}}" title="Twitter" target="_blank">Twitter</a>
+                    {{/if}}
+                    {{#if model.artist.youtube}}
+                      <a class="icon-youtube social-link" href="{{model.artist.youtube}}" title="YouTube" target="_blank">YouTube</a>
+                    {{/if}}
+                    {{#if model.artist.soundcloud}}
+                      <a class="icon-soundcloud social-link" href="{{model.artist.soundcloud}}" title="SoundCloud" target="_blank">SoundCloud</a>
+                    {{/if}}
+                    {{#if model.artist.instagram}}
                       <a class="icon-instagram social-link" href="{{model.artist.instagram}}" title="Instagram" target="_blank">Instagram</a>
-                      {{/if}}
-                    </div>
-                    <div class="fl">
-                        {{#if model.artist.spotify}}
-                          <a class="icon-spotify social-link" href="{{model.artist.spotify}}" title="Spotify" target="_blank">Spotify</a>
-                        {{/if}}
-                        {{#if model.artist.itunes}}
-                          <a class="icon-itunes social-link" href="{{model.artist.itunes}}" title="iTunes" target="_blank">iTunes</a>
-                        {{/if}}
-                        {{#if model.artist.tumbler}}
-                          <a class="icon-tumbler social-link" href="{{model.artist.tumbler}}" title="Tumblr" target="_blank">Tumblr</a>
-                        {{/if}}
-                        {{#if model.artist.pandora}}
-                          <a class="icon-pandora social-link" href="{{model.artist.pandora}}" title="Pandora" target="_blank">Pandora</a>
-                        {{/if}}
-                        {{#if model.artist.reverbnation}}
-                          <a class="icon-star social-link" href="{{model.artist.reverbnation}}" title="ReverbNation" target="_blank">ReverbNation</a>
-                        {{/if}}
-                    </div>
+                    {{/if}}
+                  </div>
+                  <div class="fl">
+                    {{#if model.artist.spotify}}
+                      <a class="icon-spotify social-link" href="{{model.artist.spotify}}" title="Spotify" target="_blank">Spotify</a>
+                    {{/if}}
+                    {{#if model.artist.itunes}}
+                      <a class="icon-itunes social-link" href="{{model.artist.itunes}}" title="iTunes" target="_blank">iTunes</a>
+                    {{/if}}
+                    {{#if model.artist.tumbler}}
+                      <a class="icon-tumbler social-link" href="{{model.artist.tumbler}}" title="Tumblr" target="_blank">Tumblr</a>
+                    {{/if}}
+                    {{#if model.artist.pandora}}
+                      <a class="icon-pandora social-link" href="{{model.artist.pandora}}" title="Pandora" target="_blank">Pandora</a>
+                    {{/if}}
+                    {{#if model.artist.reverbnation}}
+                      <a class="icon-star social-link" href="{{model.artist.reverbnation}}" title="ReverbNation" target="_blank">ReverbNation</a>
+                    {{/if}}
+                  </div>
                 </div>
-            </div>
+              </div>
+            {{/if}}
 
-            <div id="widget_reverbnation" class="box">
+            {{#if model.artist.reverbnationShows}}
+              <div id="widget_reverbnation" class="box">
                 <div class="box-title">TOUR</div>
-                <iframe width="100%" height="578" class="widget_iframe" src="http://www.reverbnation.com/widget_code/html_widget/artist_54335?widget_id=52&posted_by=artist_54335&pwc[design]=default&pwc[background_color]=%23333333&pwc[layout]=detailed&pwc[show_map]=0&pwc[size]=fit" frameborder="0" scrolling="no"></iframe>
-            </div>
+                {{{model.artist.reverbnationShows}}}
+                  <!-- <iframe width="100%" height="578" class="widget_iframe" src="http://www.reverbnation.com/widget_code/html_widget/artist_54335?widget_id=52&posted_by=artist_54335&pwc[design]=default&pwc[background_color]=%23333333&pwc[layout]=detailed&pwc[show_map]=0&pwc[size]=fit" frameborder="0" scrolling="no"></iframe> -->
+              </div>
+            {{/if}}
 
             <!-- <div id="widget_merch" class="box">
               <div class="box-title">MERCH</div>
@@ -120,20 +142,22 @@
               <script id="wepay-widget_script" type="text/javascript" src="https://static.wepay.com/min/js/widget.wepay.js"></script>
             </div> -->
 
-            <div id="widget_contact_handles" class="box">
-                <div class="box-title">CONTACT</div>
-                <div class="box-content clearfix">
-                  <br>
+            {{#if model.artist.email}}
+              <div id="widget_contact_handles" class="box">
+                  <div class="box-title">CONTACT</div>
+                  <div class="box-content clearfix">
+                    <br>
 
-                  <strong>Band</strong>
-                  <p>
-                    <a href="mailto:28northband@gmail.com" title="Email 28North">28northband@gmail.com</a>
-                  </p>
+                    <strong>Band</strong>
+                    <p>
+                      <a href="mailto:{{model.artist.email}}" title="Email {{model.artist.name}}">{{model.artist.email}}</a>
+                    </p>
 
-                  <br>
+                    <br>
 
-                </div>
-            </div>
+                  </div>
+              </div>
+            {{/if}}
         </div>
     </div>
 </div>

@@ -7,31 +7,30 @@
     }
   }
   #photos {
-    background: url('../../imgs/carbon_fibre_transparent.png') repeat 0 0 #000;
-    padding: 10px 10px 0;
-    .instagram-placeholder {
-      margin: 0 15px 15px 0;
-      float: left;
+    // background: url('../../imgs/carbon_fibre_transparent.png') repeat 0 0 #000;
+    background: #212020;
+    padding: 10px;
+    @media #{$small-only}{
+      margin: 0 2% 2% 0;
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
+    a {
+      display: inline-block;
+      margin-right: 4px;
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
       @media #{$small-only}{
-        margin: 0 2% 2% 0;
-        width: 32%;
-        &:nth-child(3n+3) {
-          margin-right: 0;
-        }
-        &:nth-child(19), &:last-child {
-          display: none;
-        }
+        margin: 0;
       }
-      @media #{$small-up}{
-        &:nth-child(4n+4) {
-          margin-right: 0;
-        }
-      }
-      img {
-        width: 75px;
-        @media #{$small-only}{
-          width: 100%;
-        }
+    }
+    img {
+      width: 80px;
+      @media #{$small-only}{
+        width: 100%;
+        margin: 0 0 10px 0;
       }
     }
   }

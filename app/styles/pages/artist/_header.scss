@@ -1,0 +1,96 @@
+/*********************************
+            TOP
+**********************************/
+#top {
+  .sector {
+    position: relative;
+    display: block
+  }
+  #banner-img {
+    width:768px;
+    @media #{$small-only}{
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+  #name {
+    width: 100%;
+    color: white;
+    display: block;
+    font-weight: bold;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: 'Baloo Tamma', cursive;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
+    font-size: 65px;
+    text-align: center;
+    line-height: initial;
+  }
+  #downloadApps {
+    @media #{$small-up}{
+      position: absolute;
+      top: 700px;
+      right: 15px;
+    }
+    @media #{$small-only}{
+      text-align: center;
+      padding: 20px 0;
+    }
+    a {
+      display: inline-block;
+      vertical-align: top;
+      margin:0 10px 0 0;
+      &#itunes {
+        margin-bottom: 10px;
+      }
+      &.social-link {
+        &:before {
+          margin: 0;
+          font-size: 34px;
+        }
+      }
+      &:last-child {
+        margin:0;
+      }
+    }
+
+  }
+}
+
+/************************************************************
+                    TOP : SOCIAL MEDIA
+*************************************************************/
+#header-links {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  font-size: 0;
+  cursor: auto;
+  .about-network-links, .about-custom-links {
+    float: right;
+    padding: 10px;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 0 0 0 3px;
+  }
+  .about-network-links {
+    margin-left: 2px;
+    .custom-links-item {
+      margin-left: 5px;
+      display: inline;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  .about-custom-link-text {
+    margin-left: 5px;
+    color: #fff;
+    font-size: 13px;
+    display: inline-block;
+  }
+  .about-custom-link-text, .about-custom-link-favicon {
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,9 @@
+#widget_video {
+  iframe {
+    width: 100%!important;
+    @media #{$small-only}{
+      width: 95%!important;
+      margin: 0 auto;
+    }
+  }
+}

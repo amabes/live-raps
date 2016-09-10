@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 body {
   color: #fff;
   text-align: center;
@@ -21,6 +22,14 @@ body {
   > div {
     height: 100%;
   }
+}
+
+*, *:focus {
+  outline: 0;
+  -moz-outline-style: none;
+  -ms-outline-style: none;
+  -o-outline-style: none;
+  -webkit-outline-style: none;
 }
 
 // Links
@@ -68,10 +77,6 @@ a, a:focus, a:hover {
   .masthead {
     position: fixed;
     top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
   }
   // Start the vertical centering
   .site-wrapper-inner {
