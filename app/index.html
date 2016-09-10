@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <meta name="keywords" content="Live Raps, LiveRaps, Ben Collatta, Ben-G, BENJI, Blizzy Wru, Cas Daniels, The Great Gat$by, SOCAL, Southern California, Underground Hip Hop, Rap, Venice Beach Sound">
-    <meta name="description" content="A collective of artists from Boston to Los Angeles. Inspired by the greats of the golden age, Live Raps is creating the new West Coast sound.">
-    <!-- <meta name="description" content="Swaggernaut Martians wit a side order of Beach Bum Dirty Pub Soul."> -->
-		<meta name="author" content="Live Raps">
-		<meta name="copyright" content="September 2016">
-		<meta name="contact" content="gatsby@liveraps.com">
-    <title>Liveraps</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for "head"}}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <meta name="keywords" content="Live Raps, LiveRaps, Ben Collatta, Ben-G, BENJI, Blizzy Wru, Cas Daniels, The Great Gat$by, SOCAL, Southern California, Underground Hip Hop, Rap, Venice Beach Sound">
+  <meta name="description" content="A collective of artists from Boston to Los Angeles. Inspired by the greats of the golden age, Live Raps is creating the new West Coast sound.">
+  <!-- <meta name="description" content="Swaggernaut Martians wit a side order of Beach Bum Dirty Pub Soul."> -->
+  <meta name="author" content="Live Raps">
+  <meta name="copyright" content="September 2016">
+  <meta name="contact" content="gatsby@liveraps.com">
+  <title>Liveraps</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> {{content-for "head"}}
 
-    <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/liveraps.css">
+  <link rel="stylesheet" href="assets/vendor.css">
+  <link rel="stylesheet" href="assets/liveraps.css"> {{content-for "head-footer"}}
+</head>
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+<body>
+  {{content-for "body"}}
 
-    <script src="assets/vendor.js"></script>
-    <script src="assets/liveraps.js"></script>
+  <script src="assets/vendor.js"></script>
+  <script src="assets/liveraps.js"></script>
 
-    {{content-for "body-footer"}}
-  </body>
+  {{content-for "body-footer"}}
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>
+    (function($) {
+      window.fnames = new Array();
+      window.ftypes = new Array();
+      fnames[4] = 'NAME';
+      ftypes[4] = 'text';
+      fnames[0] = 'EMAIL';
+      ftypes[0] = 'email';
+      fnames[1] = 'GENRE';
+      ftypes[1] = 'dropdown';
+      fnames[3] = 'SOUNDCLOUD';
+      ftypes[3] = 'url';
+      fnames[5] = 'YOUTUBE';
+      ftypes[5] = 'url';
+      fnames[6] = 'INSTAGRAM';
+      ftypes[6] = 'url';
+      fnames[2] = 'FACEBOOK';
+      ftypes[2] = 'url';
+      fnames[7] = 'BANNER';
+      ftypes[7] = 'url';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+  </script>
+</body>
+
 </html>

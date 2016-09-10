@@ -3,3 +3,19 @@ body[route="epk"] {
     margin-top: 0!important;
   }
 }
+#mc-embedded-subscribe-form {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+  @media #{$small-only}{
+    width: 90%;
+  }
+  input:not(#mc-embedded-subscribe) {
+    color: #333;
+    font-weight: bold;
+
+  }
+  .asterisk {
+    color: red;
+  }
+}
