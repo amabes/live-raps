@@ -1,4 +1,5 @@
 body[route="epk"] {
+  background-image: url("../images/backgrounds/about.jpg");
   h1.cover-heading {
     margin-top: 0!important;
   }
@@ -19,3 +20,17 @@ body[route="epk"] {
     color: red;
   }
 }
+
+// SUCCESS
+body[route="success"] {
+  ol {
+    text-align: left;
+    width: 50%;
+    margin: 10px auto;
+    @media #{$small-only}{
+      width: auto;
+    }
+  }
+}
+
+// CONFIRM
